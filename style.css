@@ -1,0 +1,101 @@
+*{
+
+    margin: 0;
+    
+    padding: 0;
+    
+    box-sizing: border-box;
+    
+    font-family: 'Poppins', sans-serif;
+    
+}
+    
+body{
+    
+    display: flex;
+    
+    align-items: center;
+    
+    justify-content: center; min-height: 100vh;
+    
+    background: #43AFFC;
+
+}
+    
+.wrapper{
+    
+    width: 400px;
+    border-radius: 7px; 
+    background: #fff;
+}
+
+.wrapper header{ 
+
+color: #43AFFC;
+
+font-size: 21px;
+
+padding: 16px 15px;
+
+font-weight: 500; 
+display: flex; 
+border-bottom: 1px solid; 
+align-items: center;
+border-bottom: 1px solid #bfbfbf;
+}
+
+header i{
+
+cursor: pointer;
+
+font-size: 30px;
+
+margin-right: 8px;
+
+}
+
+.wrapper .input-part{ 
+    margin: 20px 25px 30px;
+}
+
+
+
+.input-part :where(input,button){
+    width: 100%;
+    height :55px;
+    border:none;
+    outline:none;
+    font-size: none;
+    border-radius: 7px;
+}
+
+.input-part input{
+    text-align: center;
+    border: 1px solid #bfbfbf;
+}
+
+.input-part .seperator{
+    height: 1px;
+    width: 100%;
+    margin: 25px 0;
+    background: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.seperator::before{
+    content: "or";
+    font-size: 19px;
+    padding: 0 15px;
+    color: #ccc;
+    background: #fff;
+}
+
+.input-part button{
+    color: bisque;
+    cursor: pointer;
+    background: #43AFFC;
+}
+
+
