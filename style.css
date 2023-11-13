@@ -48,17 +48,27 @@ header i{
 
 cursor: pointer;
 
-font-size: 30px;
+font-size: 0px;
 
 margin-right: 8px;
 
+}
+
+.wrapper .active header i{
+    font-size: 30px;
+    margin-left: 5px;
 }
 
 .wrapper .input-part{ 
     margin: 20px 25px 30px;
 }
 
+.wrapper.active .input-part{
+    display: none;
+
+}
 .input-part .info-txt{ 
+    display: none;
     font-size: 17px;
     text-align: center;
     padding: 12px 10px;
@@ -67,6 +77,7 @@ margin-right: 8px;
 }
 
 .info-txt.error{ 
+    display: block;
     color: red;
     background: #f8d7da;
     background: #f5c6cb;
@@ -94,6 +105,10 @@ margin-right: 8px;
     border: 1px solid #bfbfbf;
 }
 
+.input-part input:is(focus, valid){
+    border: 2px solid #43AFFC;
+}
+
 .input-part .seperator{
     height: 1px;
     width: 100%;
@@ -119,3 +134,95 @@ margin-right: 8px;
 }
 
 
+.wrapper .weather-part{
+    margin: 30px 0 0;
+    display:none;
+    align-items:center;
+    justify-content: center;
+    flex-direction: center;
+    flex-direction: column;
+}
+
+.wrapper.active .weather-part{
+    display: flex;
+    
+}
+.weather-part img{
+    max-width: 125px;
+}
+
+.weather-part .temp{
+    display: flex;
+    font-size:72px;
+    font-weight: 500;
+}
+
+.weather-part .temp .numb{
+    font-weight: 600;
+}
+
+.weather-part .temp .deg{
+    font-size: 40px;
+    margin: 10px 5px 0 0;
+    display: block;
+}
+
+.weather-part .weather{
+    font-size: 21px;
+    text-align:center;
+    margin: -5px 20px 15px;
+}
+
+.weather-part .location{
+    display: flex;
+    align-items:center;
+    font-size: 21px;
+    margin-bottom:30px
+}
+
+.location i{
+    font-size: 22px;
+    margin-right: 5px;
+}
+
+.weather-part .bottom-details{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #bfbfbf;
+    justify-content: space-between;
+}
+
+.bottom-details .column{
+    width: 100%;
+    display: flex;
+    padding: 15px 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.column i{
+    color: green;
+    font-size: 40px;
+}
+
+.column.humdity{
+    border-left: 1px solid #bfbfbf;
+}
+
+.details .temp .humidity span{
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: -3px;
+}
+
+.details .tmep .deg{
+    margin: 0;
+    font-size: 17px;
+    pad: 0 2px 0 1px;
+}
+
+.detials p{
+    font-size: 14px;
+    margin-top: -6px;
+}
